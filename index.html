@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Book Catalog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<section class="main">
+		<div class="main-container">
+			<div class="container" id="container">
+				<div class="row control-panel">
+					<div class="col-lg-4">
+						<a href="form.html">
+							<input type="button" class="btn btn-primary" name="addNew" value="Add New Item"/>
+						</a>
+					</div>
+					<div class="col-lg-4">
+
+						<label class="col-md-3 control-label" for="sortby">Sort By</label>
+						<div class="col-md-8">
+							<select id="sortby" name="sortby" class="form-control">
+								<option value="entry_date">Most Recent</option>
+								<option value="publicationdate">Published date</option>
+								<option value="rating">Most Popular</option>
+							</select>
+							
+						</div>
+					</div>					
+					<div class="col-lg-4">
+						
+						<label class="col-md-2 control-label" for="filter">Filter</label>  
+						<div class="col-md-9">
+							<input id="filter" name="filter" type="text" placeholder="" class="form-control input-md">
+							
+							
+						</div>
+					</div>
+				</div>				
+				<div class="row">
+					<div class="col col-lg-4">
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+											By Author
+										</a>
+									</h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse">
+									<div class="panel-body nav-side-menu">
+										<ul class="sub-menu" id="byAuthorPanel">
+											<li data-label="all" onclick="displayGroupByList(this)"><a href="#">All</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+											By Category
+										</a>
+									</h4>
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse">
+									<div class="panel-body nav-side-menu" id="byCategoryPanel">
+										<ul class="sub-menu" id="byCategoryPanel">
+											<li data-label="all" onclick="displayGroupByList(this)"><a href="#">All</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+											By Published Date
+										</a>
+									</h4>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse">
+									<div class="panel-body nav-side-menu" id="byYearPanel">
+										<ul class="sub-menu" id="byYearPanel">
+											<li data-label="all" onclick="displayGroupByList(this)"><a href="#">All</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col col-lg-8 catalog">
+						<div id="catelog-container">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="scripts/data.js"></script>
+	<script type="text/javascript" src="scripts/services.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>	
+</body>
+</html>

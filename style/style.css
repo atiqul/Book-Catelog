@@ -1,0 +1,115 @@
+.catalog{
+        border-left: 1px solid #ddd;
+}
+.control-panel{
+        margin: 20px 0;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.details {
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 30%;
+    z-index: 5;
+}
+
+.overlay{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
+}
+
+.cover{
+    position: relative;
+	max-height: 300px;
+	min-height: 300px;
+	border: 1px solid;
+	overflow: hidden;
+}
+
+.cover:hover .overlay{
+    display: block;
+}
+
+.cover:hover .details{
+    display: block;
+}
+
+
+.cover img{
+	width: 100%
+}
+
+.author {
+    font-family: cursive;
+    font-size: 12px;
+}
+
+.title {
+    padding: 5px 0 0;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-container {
+    margin-bottom: 30px;
+}
+
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.panel-body{
+    padding: 0px;
+}
+
+
+
+.nav-side-menu ul, .nav-side-menu li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.nav-side-menu li {
+    padding-left: 15px;    
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-side-menu li:hover{
+    background: #ddd;
+}
+
+.nav-side-menu li.active{
+    background: #ddd;
+}
+
+.nav-side-menu li a:hover, .nav-side-menu li a:focus{
+    text-decoration: none;
+}
+.nav-side-menu ul .sub-menu li, .nav-side-menu li .sub-menu li {
+    background-color: #181c20;
+    border: none;
+    line-height: 28px;
+    border-bottom: 1px solid #23282e;
+    margin-left: 0px;
+}

@@ -1,0 +1,82 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Book title</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	</head>
+	<body>
+		<div class="row">
+			<div class="container">
+				<div class="col col-lg-4">
+
+					<div id="cover">
+						<img id="cover_img" src="img/defbookcover.jpg" width="100%">
+					</div>
+					<div id="author_left">by test</div>
+					<div id="title_left"></div>
+					<div class="button-group" style="margin-top: 20px;">
+					<input type="button" class="btn btn-primary edit" onclick="goEdit()" value="Edit">
+					<input type="button" class="btn btn-danger delete" onclick="goDelete()" value="Delete">
+				</div>
+
+				</div>
+				<div class="col col-lg-8">
+					<div class="book-title">
+						<h3 id="title_right">Book title goes here</h3>
+						<div class="byline">
+							by <span id="author_right">author name goes here</span>
+							<div class="rating-container" style="float:right;">
+								Rating <span id="rating">3.5</span>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="summary-container">
+						<h4>Summary</h4>
+						<div id="lipsum">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec magna turpis, porttitor quis urna quis, vulputate vehicula urna. Mauris viverra consequat tortor. Vivamus fringilla ultrices ante, et tempus tellus dictum vitae. Donec maximus ante massa, tincidunt gravida orci eleifend non. Pellentesque vitae sem magna. Donec eget eleifend velit. In rhoncus, enim id ultricies consequat, elit turpis imperdiet lectus, non tincidunt erat lorem sed nisi. Aenean tempus efficitur elementum. Morbi sodales velit feugiat fermentum efficitur. Aenean eget cursus lectus. Quisque accumsan id sem nec imperdiet. Ut elementum lectus at imperdiet dictum. Aliquam vehicula nisi felis, in sollicitudin urna egestas in. Donec a dolor metus.
+							</p>
+							<p>
+								Aenean vitae volutpat enim. Maecenas ullamcorper sagittis blandit. Maecenas blandit sem dolor, non gravida lectus tristique nec. Phasellus quis velit id lacus fermentum scelerisque. Suspendisse vitae ultrices ante. In hac habitasse platea dictumst. Sed urna enim, tincidunt sed tellus et, pretium condimentum sapien. Praesent finibus non nulla sed vehicula. In volutpat hendrerit magna, vel suscipit nulla tincidunt a. Sed ac risus id augue sodales vestibulum. Aenean luctus leo dui, at rutrum augue tempus et. In vulputate tempor lacinia. Curabitur eleifend nisi eu ipsum eleifend congue.
+							</p>
+							<p>
+								Vivamus in venenatis ipsum. Ut eget nibh bibendum est lobortis sollicitudin. Aliquam rhoncus dolor id erat tempor, vitae fringilla mauris dignissim. Fusce feugiat felis sem, a dignissim lorem mattis a. Morbi facilisis vestibulum sapien, vitae sagittis diam. Etiam vitae feugiat turpis, luctus sodales erat. Nam eleifend pretium nulla, ac luctus mi dapibus eu. Sed cursus tortor fermentum lacus mollis ornare. Vestibulum justo velit, pellentesque sed lobortis eu, bibendum lacinia urna. Mauris in quam quis sem ornare rutrum vitae id quam.
+							</p>
+							<p>
+								Duis egestas quam metus, quis vehicula odio varius sagittis. Donec ut cursus velit. Duis pretium tincidunt finibus. Integer vel justo sit amet risus faucibus commodo. In efficitur nisi non lectus interdum iaculis. In non dapibus leo. Vestibulum risus tellus, vulputate ut sapien a, lacinia dapibus velit. Integer viverra hendrerit neque, nec varius elit finibus ut. Vestibulum rutrum ligula ac ipsum suscipit, quis pulvinar massa convallis. Pellentesque accumsan nunc sed erat commodo interdum.
+							</p>
+							<p>
+								Cras est leo, mollis sit amet consequat nec, cursus ut magna. Duis egestas viverra nulla, vitae condimentum ligula tempus vitae. Vivamus bibendum sollicitudin suscipit. Cras non tortor odio. Integer imperdiet, quam vitae tincidunt aliquam, mauris justo fringilla orci, non eleifend neque mauris vitae velit. Fusce ac augue nisi. Proin vel sagittis leo, eget maximus tellus. Praesent pretium nec tellus quis pulvinar. Duis vulputate suscipit tortor, at elementum ante tristique vitae. Ut convallis massa diam, ut viverra neque euismod eu.
+							</p></div>
+						</div>
+
+					</div>
+				</div>
+				<div id="dialogue-container" style="display: none;">
+				<div class="ovarlay" style="height: 100%;
+    width: 100%;
+    background: black;
+    position: fixed;
+    top: 0;
+    opacity: 0.6;
+"></div>
+				<div class="form-group confirm-dialogue" style="background: white;    
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    padding: 20px 5px;">
+  <label class="col-md-7 control-label" for="button1id">Are you sure you want to delete this item?</label>
+  <div class="col-md-5">
+    <button id="cancel" name="button1id" onclick="exit();" class="btn btn-default">Cancel</button>
+    <button id="confirm" name="confirm" onclick="confirmDel();" class="btn btn-danger">Confirm</button>
+  </div>
+</div>
+	</div>
+  </div>
+			</div>
+			<script type="text/javascript" src="scripts/services.js"></script>
+			<script type="text/javascript" src="scripts/details.js"></script>
+		</body>
+		</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add new item</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="form-container">
+		<form name="form" id="form" class="form-horizontal" action="index.html" method="post">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Add new item</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="title">Title</label>  
+  <div class="col-md-5">
+  <input id="title" name="title" type="text" placeholder="Title of the book" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="author">Author</label>  
+  <div class="col-md-5">
+  <input id="author" name="author" type="text" placeholder="Name of the author" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="publicationdate">Publication Date</label>  
+  <div class="col-md-5">
+  <input id="publicationdate" name="publicationdate" type="text" placeholder="Publication Date" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="isbn">ISBN</label>  
+  <div class="col-md-5">
+  <input id="isbn" name="ISBN" type="text" placeholder="ISBN number" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cover">Cover</label>  
+  <div class="col-md-5">
+  <input id="cover" name="cover" type="text" placeholder="Cover image url" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="language">Language</label>  
+  <div class="col-md-5">
+  <input id="language" name="language" type="text" placeholder="Language of the book" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rating">Rating</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="rating-0">
+      <input type="radio" name="rating" id="rating-0" value="1">
+      1
+    </label> 
+    <label class="radio-inline" for="rating-1">
+      <input type="radio" name="rating" id="rating-1" value="2">
+      2
+    </label> 
+    <label class="radio-inline" for="rating-2">
+      <input type="radio" name="rating" id="rating-2" value="3">
+      3
+    </label> 
+    <label class="radio-inline" for="rating-3">
+      <input type="radio" name="rating" id="rating-3" value="4">
+      4
+    </label>    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tags">Tags</label>  
+  <div class="col-md-5">
+  <input id="tags" name="tags" type="text" placeholder="Tags in a comma separated value" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-8">
+    <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+    <input type="button" id="cancel" name="cancel" class="btn btn-default" value="Cancel"/>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+	</div>
+  </div>
+  <script type="text/javascript" src="scripts/services.js"></script>
+  <script type="text/javascript" src="scripts/form.js"></script>
+</body>
+</html>
