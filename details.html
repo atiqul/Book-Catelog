@@ -16,9 +16,12 @@
 					<div id="author_left">by test</div>
 					<div id="title_left"></div>
 					<div class="button-group" style="margin-top: 20px;">
-					<input type="button" class="btn btn-primary edit" onclick="goEdit()" value="Edit">
-					<input type="button" class="btn btn-danger delete" onclick="goDelete()" value="Delete">
-				</div>
+						<input type="button" class="btn btn-primary edit" onclick="goEdit()" value="Edit">
+						<input type="button" class="btn btn-danger delete" onclick="goDelete()" value="Delete">
+						<a href="index.html">
+						<input type="button" class="btn btn-default" value="Back to home">
+						</a>
+					</div>
 
 				</div>
 				<div class="col col-lg-8">
@@ -55,28 +58,28 @@
 					</div>
 				</div>
 				<div id="dialogue-container" style="display: none;">
-				<div class="ovarlay" style="height: 100%;
-    width: 100%;
-    background: black;
-    position: fixed;
-    top: 0;
-    opacity: 0.6;
-"></div>
-				<div class="form-group confirm-dialogue" style="background: white;    
-    position: fixed;
-    top: 40%;
-    left: 30%;
-    padding: 20px 5px;">
-  <label class="col-md-7 control-label" for="button1id">Are you sure you want to delete this item?</label>
-  <div class="col-md-5">
-    <button id="cancel" name="button1id" onclick="exit();" class="btn btn-default">Cancel</button>
-    <button id="confirm" name="confirm" onclick="confirmDel();" class="btn btn-danger">Confirm</button>
-  </div>
-</div>
-	</div>
-  </div>
+					<div class="ovarlay" style="height: 100%;
+					width: 100%;
+					background: black;
+					position: fixed;
+					top: 0;
+					opacity: 0.6;
+					"></div>
+					<div class="form-group confirm-dialogue" style="background: white;    
+					position: fixed;
+					top: 40%;
+					left: 30%;
+					padding: 20px 5px;">
+					<label class="col-md-7 control-label" for="button1id">Are you sure you want to delete this item?</label>
+					<div class="col-md-5">
+						<button id="cancel" name="button1id" onclick="exit();" class="btn btn-default">Cancel</button>
+						<button id="confirm" name="confirm" onclick="confirmDel();" class="btn btn-danger">Confirm</button>
+					</div>
+				</div>
 			</div>
-			<script type="text/javascript" src="scripts/services.js"></script>
-			<script type="text/javascript" src="scripts/details.js"></script>
-		</body>
-		</html>
+		</div>
+	</div>
+	<script type="text/javascript" src="scripts/services.js"></script>
+	<script type="text/javascript" src="scripts/details.js"></script>
+</body>
+</html>

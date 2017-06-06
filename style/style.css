@@ -51,6 +51,11 @@
     font-size: 12px;
 }
 
+.author > span{
+        display: block;
+    float: right;
+}
+
 .title {
     padding: 5px 0 0;
     width: 90%;

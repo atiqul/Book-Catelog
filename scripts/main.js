@@ -48,11 +48,16 @@ function displayCatelog(data, limit, startIndex) {
 				var author = createElem('div', {
 					"class": "author"
 				});
+				var rating = createElem('span')
 				var title = createElem('div', {
 					"class": "title"
 				});
+
 				title.innerHTML = entry.title;
 				author.innerHTML = "by " + entry.author;
+				rating.innerHTML = entry.rating != "" ? "Rating: " + entry.rating : "";
+
+				author.appendChild(rating);
 
 				cover.appendChild(overlay);
 				cover.appendChild(button);
