@@ -1,8 +1,9 @@
 .catalog{
-        border-left: 1px solid #ddd;
+    border: 1px solid #ddd;
+    padding-top: 20px;
 }
 .control-panel{
-        margin: 20px 0;
+    margin: 20px -15px 20px 0;
     border: 1px solid #ddd;
     padding: 20px;
 }

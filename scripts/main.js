@@ -12,9 +12,9 @@ function displayCatelog(data, limit, startIndex) {
 	displayedObj = data;
 	startIndex = startIndex || 0;
 	offset = startIndex + limit;
-	var row = createElem('div', {
-		'class': 'row'
-	});
+	// var row = createElem('div', {
+	// 	'class': 'row'
+	// });
 	var limitUpperBound = startIndex + limit;
 	for (var i = startIndex; i < limitUpperBound; i++) {
 		if (data.hasOwnProperty(i)) {
@@ -66,10 +66,7 @@ function displayCatelog(data, limit, startIndex) {
 				col.appendChild(author);
 				col.appendChild(title);
 
-				row.appendChild(col);
-
-
-				document.getElementById('catelog-container').appendChild(row);
+				document.getElementById('catelog-container').appendChild(col);
 
 			}(i));
 		}
