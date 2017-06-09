@@ -12,9 +12,7 @@ function displayCatelog(data, limit, startIndex) {
 	displayedObj = data;
 	startIndex = startIndex || 0;
 	offset = startIndex + limit;
-	// var row = createElem('div', {
-	// 	'class': 'row'
-	// });
+
 	var limitUpperBound = startIndex + limit;
 	for (var i = startIndex; i < limitUpperBound; i++) {
 		if (data.hasOwnProperty(i)) {
