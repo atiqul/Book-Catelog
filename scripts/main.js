@@ -16,7 +16,6 @@ function displayCatelog(data, limit, startIndex) {
 		'class': 'row'
 	});
 	var limitUpperBound = startIndex + limit;
-	console.log(startIndex)
 	for (var i = startIndex; i < limitUpperBound; i++) {
 		if (data.hasOwnProperty(i)) {
 			setTimeout(function() {
@@ -70,7 +69,7 @@ function displayCatelog(data, limit, startIndex) {
 				row.appendChild(col);
 
 
-				document.getElementById('catelog-container').append(row);
+				document.getElementById('catelog-container').appendChild(row);
 
 			}(i));
 		}
@@ -128,6 +127,7 @@ function createSideMenu(obj, parentId) {
 }
 
 function displayGroupByList(elem) {
+	elem.children[0].click();
 	var activeElems = document.querySelectorAll(".active");
 
 	[].forEach.call(activeElems, function(el) {
@@ -137,13 +137,11 @@ function displayGroupByList(elem) {
 	elem.classList.add("active")
 	var prop = elem.getAttribute("data-label");
 	var resultArr = totalGroupByObject[prop];
-	console.log(prop);
 	if (prop == "all") {
 		resultArr = dataSrc;
 	}
 	document.getElementById('catelog-container').innerHTML = ""
-
-	displayCatelog(resultArr, 12)
+	displayCatelog(resultArr, 12);
 	return false;
 }
 
@@ -163,13 +161,14 @@ for (i = 0; i < accHD.length; i++) {
 
 function toggleItem() {
 	var itemClass = this.className;
-	var open = this.nextSibling.nextSibling.classList.value.indexOf("in") > -1;
+	var open = this.nextSibling.nextSibling.classList.contains("in");
+
 	for (i = 0; i < accItem.length; i++) {
 		accItem[i].classList.remove("in");
 		accItem[i].previousSibling.previousSibling.children[0].children[0].classList.add("collapsed")
 	}
 	if (!open) {
-		this.nextSibling.nextSibling.classList.add("in");
+		this.nextSibling.nextSibling.classList.toggle("in");
 		this.children[0].children[0].classList.remove("collapsed");
 	}
 }
